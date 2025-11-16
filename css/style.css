@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7ff;
+    color: #222;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+.primary-btn {
+    padding: 12px 28px;
+    background: #0b76ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #095ccc;
+}
+
+/* Fade Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
+}
+.delay-1 { animation-delay: 0.6s; }
+.delay-2 { animation-delay: 1.2s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Landing */
+#landing {
+    height: 100vh;
+    background: linear-gradient(135deg, #0b76ff, #ffd166);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing-inner h1 { font-size: 2.5rem; font-weight: 700; }
+.landing-inner p { opacity: 0.9; margin-top: 8px; }
+
+
+/* Greeting Page */
+#greeting {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #0b76ff;
+    margin-bottom: 20px;
+}
+
+.photo-frame img {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    border: 5px solid #0b76ff;
+    object-fit: cover;
+}
+
+.big-wish {
+    margin: 20px auto;
+    font-size: 1.2rem;
+    max-width: 350px;
+}
+
+.sub-heading {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #ff9800;
+}
+
+.jokes {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.jokes li {
+    padding: 8px 0;
+}
+
+
+/* Message Wall */
+.message-wall {
+    margin-top: 20px;
+    background: #e7f1ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.message-wall p { margin: 6px 0; }
+
+
+/* Hunt Section */
+#hunt {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.unlock-btn {
+    padding: 12px 25px;
+    margin: 15px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #ff9800;
+    color: #fff;
+    cursor: pointer;
+}
+
+.locked {
+    background: #9e9e9e !important;
+    cursor: not-allowed;
+}
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 85%;
+    max-width: 380px;
+}
+
+#closeModal {
+    float: right;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+/* Final Section */
+#finalSection {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.final-title {
+    font-size: 2rem;
+    color: #0b76ff;
+}
+
+.final-text {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
