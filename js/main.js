@@ -1,3 +1,5 @@
+//js/main.js
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const landing = document.getElementById("landing");
@@ -83,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
             Wishing you success, joy and prosperity always! 💙🎂💼
         `;
         modal.classList.remove("hidden");
+         // Show final birthday message section
+    document.getElementById("finalSection").classList.remove("hidden");
 
         setTimeout(() => {
             hunt.classList.add("hidden");

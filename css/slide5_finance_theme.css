@@ -1,0 +1,251 @@
+/* GENERAL */
+body {
+    margin: 0;
+    background: #f3f4f6;
+    font-family: Poppins, sans-serif;
+    overflow-x: hidden;
+}
+
+/* FLOATING BACKGROUND ICONS */
+.floating-icons {
+    position: absolute;
+    top: 5%;
+    left: -2%;
+    opacity: 0.06;
+    font-size: 70px;
+    animation: floatBG 10s infinite alternate ease-in-out;
+}
+@keyframes floatBG {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(40px,50px); }
+}
+
+/* HEADER */
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+.header-quote {
+    font-size: 2.7rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    color: #0b76ff;
+}
+
+#infinity {
+    cursor: pointer;
+    color: #ffd166;
+    transition: 0.3s;
+}
+#infinity:hover {
+    text-shadow: 0 0 20px #ffd166;
+}
+
+/* POPUP (with FIXED Z-INDEX!) */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* FIX */
+}
+
+.popup-box {
+    background: white;
+    padding: 25px;
+    width: 85%;
+    max-width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 10000; /* FIX */
+}
+
+.popup-box button {
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #0b76ff;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* GRAPH CARD */
+.graph-card {
+    background: white;
+    padding: 25px;
+    margin: 30px auto;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.bar-graph {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    width: 50px;
+    background: linear-gradient(#0b76ff, #0044aa);
+    border-radius: 10px 10px 0 0;
+    animation: grow 1.6s ease-out forwards;
+    height: 0;
+}
+
+
+/* Convert percentage to px using graph height (200px) */
+@keyframes grow {
+    from { height: 0; }
+    to { height: calc((var(--height) * 200) / 100); }
+}
+
+.bar-label {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #0044aa;
+}
+
+/* METRICS GRID */
+.metrics-grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.metric-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.metric-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.metric-box h3 {
+    color: #0b76ff;
+    font-weight: 700;
+}
+
+/* GAUGE CARD */
+.gauge-card {
+    margin-top: 50px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.gauge {
+    position: relative;
+    width: 250px;
+    height: 140px;
+    margin: 20px auto;
+}
+
+.gauge-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 250px 250px 0 0;
+    background: conic-gradient(
+        #16a34a 0deg,
+        #eab308 180deg,
+        #ffd166 270deg
+    );
+    position: relative;
+}
+
+.needle {
+    width: 4px;
+    height: 90px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: bottom center;
+    animation: spinNeedle 2.4s ease-out forwards;
+}
+
+@keyframes spinNeedle {
+    from { transform: translateX(-50%) rotate(-90deg); }
+    to { transform: translateX(-50%) rotate(80deg); }
+}
+
+.gauge-label {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #0b76ff;
+}
+
+/* NEXT BUTTON */
+.next {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    background: #0b76ff;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.bar-graph {
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-end;
+    height:200px;
+    margin-top:20px;
+}
+
+.bar-item {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.bar {
+    width: 50px;
+    background: linear-gradient(#0b76ff, #0044aa);
+    border-radius: 10px 10px 0 0;
+    height: 0;
+    animation: grow 1.5s ease-out forwards;
+}
+
+@keyframes grow {
+    from { height: 0; }
+    to { height: var(--height); }
+}
+
+.bar-label {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #0044aa;
+}
