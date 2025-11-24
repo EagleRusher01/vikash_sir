@@ -1,6 +1,13 @@
-//js/slide4_messages.js
-
 let unlocked = { m1: false, m2: false };
+
+// AUDIO
+const chime = document.getElementById("chime");
+
+// Play audio on ANY click
+document.addEventListener("click", () => {
+    chime.play().catch(() => {});
+}, { once: true });
+
 
 const msg1Btn = document.getElementById("msg1Btn");
 const msg2Btn = document.getElementById("msg2Btn");
@@ -71,7 +78,7 @@ function startConfetti() {
             y: Math.random() * canvas.height - canvas.height,
             size: Math.random() * 6 + 2,
             speed: Math.random() * 3 + 2,
-            color: ["#ffd166", "#0ea5e9", "#fff"][Math.floor(Math.random()*3)]
+            color: ["#ffd166", "#0ea5e9", "#fff"][Math.floor(Math.random() * 3)]
         });
     }
 

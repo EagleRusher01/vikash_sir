@@ -79,10 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     finalBtn.addEventListener("click", () => {
         modalTitle.innerText = "Final Surprise 🎉";
         modalMessage.innerHTML = `
-            Happy Birthday Dr. Vikash Varshney!<br><br>
+            Happy Birthday Dr. Vikas Varshney!<br><br>
             You are an inspiration — in wisdom, discipline, & humility.<br>
             Thank you for shaping us as students AND individuals.<br><br>
             Wishing you success, joy and prosperity always! 💙🎂💼
+            sir, shadi m bulana mat bhuliyega
         `;
         modal.classList.remove("hidden");
          // Show final birthday message section

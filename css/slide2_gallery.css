@@ -179,3 +179,29 @@ body {
 .next-slide:hover {
     background: #005ed1;
 }
+
+
+
+.extra-photo-list {
+    margin-top: 20px;
+    padding: 10px;
+    height: 250px; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.extra-photo-card {
+    width: 92%;
+    margin: 0 auto;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.extra-photo-card img {
+    width: 100%;
+    border-radius: 10px;
+}
