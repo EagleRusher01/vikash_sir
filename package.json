@@ -1,11 +1,7 @@
 {
   "name": "birthday_quest",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "Birthday Quest Web App",
-=======
-  "description": "Birthday image server",
->>>>>>> d21d9bff8926ddcc3ead1d3144ac773d1cbc7083
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
